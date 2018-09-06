@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trial ID:</strong>
+  <%= @trial.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @trial.name %>
+</p>
+
+<p>
+  <strong>Client ID:</strong>
+  <%= @trial.client_id %>
+</p>
+
+<p>
+  <strong>Items:</strong>
+  <%= @trial.items.pluck(:id, :name) %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_trial_path(@trial) %> |
+<%= link_to 'Back', trials_path %>
