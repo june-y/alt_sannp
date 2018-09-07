@@ -14,4 +14,5 @@ class Trial < ApplicationRecord
   belongs_to :client, optional: true, foreign_key: 'client_id'
   has_many :items
   validates :name,:client_id, presence: true
+  #validates_uniqueness_of :name, scope: :client_id
 end
